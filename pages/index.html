@@ -1,0 +1,1223 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+<link href="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet"
+    type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125895686-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125895686-1');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- JQuery -->
+<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
+<script>
+    $(document).ready(function () {
+        $("#morebutton").click(function () {
+            $("#morebutton").hide();
+            $(".hidden").show();
+        });
+    });
+
+
+</script><!-- Bootstrap -->
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet" />
+<!-- Font Awesome-->
+<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" rel="stylesheet" />
+<style type="text/css">
+    body {
+        margin: 0;
+        font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        padding-top: 6em;
+    }
+
+    .icon-bar {
+        width: 100%;
+        /* background-color: #00629B; */
+        background-color: #FFFFFF;
+        overflow: auto;
+        /* top: 0;
+            position: fixed; */
+    }
+
+    .icon-bar a {
+        float: right;
+        width: 10%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: black;
+        font-size: 36px;
+    }
+
+    .icon-bar a:hover {
+        /* background-color: #005384; */
+        background-color: gray;
+    }
+
+    .events {
+        /* border: 2px;
+            border-color: black;
+            border-style: solid;
+            margin-top: 1%;
+            margin-bottom: 1%; */
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .padded {
+        padding: 3%;
+    }
+
+    .indent1 {
+        text-indent: 1em;
+        color: red;
+    }
+
+    .indent2 {
+        text-indent: 2em;
+    }
+
+    .sidepic {
+        width: 100%;
+    }
+
+    .active {
+        background-color: #005384;
+    }
+
+    .officers {
+        width: 100%;
+        padding-bottom: 10px;
+        opacity: .90;
+    }
+
+    .square {
+        border: 0px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    /* .name, .position, .contacts{
+            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;                                    
+        } */
+
+    .contacts {
+        font-size: 150%;
+    }
+
+    .nounderline:hover {
+        text-decoration: none;
+    }
+
+    .nav-item {
+        margin-right: 0.5em;
+    }
+
+    .divider {
+        border-width: 2px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #morebutton {
+        font-size: 75%;
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-bottom: 5%;
+    }
+
+    #contact {
+        font-size: 300%;
+    }
+</style>
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" style="background-color: white;"><img
+        src="http://os_extranet_images.s3.amazonaws.com/460162_original.png" style="width: 5em;" /><button
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#officers">Officers</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.ieee.org/membership/join/index.html">Join</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="http://ewh.ieee.org/council/sfba/index.html">eGRID</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="https://www.ieee.org">IEEE.org</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <!-- display pdf file on dialog window -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnShow').click(function () {
+                $("#dialog").dialog({
+                    width: 650,
+                    height: 400,
+                });
+                $("#frame").attr("src", "[[file:BMGuide]]");
+            });
+        });
+    </script><button href="#" id="btnShow">Become a member</button>
+
+    <div class="centered" id="dialog" style="display: none;">
+        <div><iframe height="100%" id="frame" width="100%"></iframe></div>
+    </div>
+    <!-- end of display pdf file on dialog window -->
+</nav>
+<!-- Events -->
+
+<p>&nbsp;</p>
+
+<h1 class="centered" id="events">Events</h1>
+
+<p>&nbsp;</p>
+
+<div class="container events">
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2>Tech opportunities and Q&amp;A</h2>
+
+            <h5 class="indent1">When:</h5>
+
+            <h5 class="indent2">Tuesday October 29th 2019</h5>
+
+            <h5 class="indent2">5:00PM-6:00PM</h5>
+
+            <h5 class="indent1">Where:</h5>
+
+            <h5 class="indent2">San Francisco State University HSS 154</h5>
+
+            <h5 class="indent1">Cost:</h5>
+
+            <h5 class="indent2">&nbsp;</h5>
+        </div>
+
+        <div class="col-lg-5 padded">
+            <!-- <strong>Bring:</strong> Your enthusiasm and know your school computer id/login.
+                        Computers provided, laptop is not necessary!<br /> --><br />
+            Come hear about all of the cool opportunities Google has for Computer Scienece and engineering majors
+            outside of software engineering. We&#39;ll discussing both full-time and internship roles, as well as open
+            Q,A.<br />
+            &nbsp;</div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic" src="[[image:google1]]" /></strong></div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>3D Printing Workshop</strong></h2>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+
+            <h5 class="indent2"><strong>Wednesday</strong></h5>
+
+            <h5 class="indent2"><strong>11:30 AM -1:00 PM</strong></h5>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+
+            <h5 class="indent2"><strong>TBA</strong></h5>
+
+            <h5 class="indent1"><strong>Cost:</strong></h5>
+
+            <h5 class="indent2"><strong>TBA</strong></h5>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>
+                <br />
+                &nbsp;</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="https://www2.calstate.edu/csu-system/news/PublishingImages/Pages/3DPrinting/3d-main-mobile-hero.jpg" />
+            </strong></div>
+    </div> -->
+</div>
+
+<p><strong><button class="btn btn-primary" id="morebutton" type="button">Past Events</button><!-- HIDDEN --> </strong>
+</p>
+
+<div class="container events hidden">
+    <hr class="divider" /><strong>
+        <!-- PASTE OLD EVENTS AFTER HERE --> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2>EII ALumni in Tech Panel</h2>
+
+            <h5 class="indent1">When:</h5>
+
+            <h5 class="indent2">Wednesday, October 23rd</h5>
+
+            <h5 class="indent2">6:30pm-8:00pm</h5>
+
+            <h5 class="indent1">Where:</h5>
+
+            <h5 class="indent2">SCI 256</h5>
+
+            <h5 class="indent1">Cost:</h5>
+
+            <h5 class="indent2">FREE!</h5>
+        </div>
+
+        <div class="col-lg-5 padded">
+            <!-- <strong>Bring:</strong> Your enthusiasm and know your school computer id/login.
+                        Computers provided, laptop is not necessary!<br /> --><br />
+            <strong>Event Details: </strong>: We want to motivate, interest students, and give them frst hand advice on
+            how to get an internship for an entry level to mid level position. There will be an introduction from each
+            engineering professional, Q&amp;A section for any tips and advice they can impart, and networking at the end
+            of the event<br />
+            <br />
+            <!-- <strong>What you gain:</strong> --><br />
+            <!-- <a class="w3-button w3-green w3border w3-round-large"
+                    href="https://events.vtools.ieee.org/m/206682">Register</a> --><br />
+            &nbsp;</div>
+
+        <div class="col-lg-4 padded"><img class="sidepic" src="[[image:IEEpanel]]" /></div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Soldering Workshop</strong></h2>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+
+            <h5 class="indent2"><strong>10/16/2019</strong></h5>
+
+            <h5 class="indent2"><strong>3:00pm-4:00pm</strong></h5>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+
+            <h5 class="indent2"><strong>SCI 111</strong></h5>
+
+            <h5 class="indent1"><strong>Cost:</strong></h5>
+
+            <h5 class="indent2"><strong>$10 for IEEE Members, $15 for non-IEEE members</strong></h5>
+        </div>
+
+        <div class="col-lg-5 padded">
+                <!-- <strong>Bring:</strong> Your enthusiasm and know your school computer id/login.
+                    Computers provided, laptop is not necessary!<br /> --><br />
+                <strong>Event Details: </strong> Led by Chris Piland, an SFSU senior and EE major, this soldering
+                workshop will teach you the basics of soldering and the different applications one may encounter. If you
+                have little to no soldering experience, this event is perfect for your beginning steps to improving your
+                technical prowess. If you have a large amount of experience, this event will teach you how to solder to
+                military specification over a wide range of soldering styles, multi conductor wires, through hole
+                components, and surface mount components. We encourage anyone, not just Electrical and Computer
+                Engineers, to attend with a willingness and a desire to learn!<br />
+                <br />
+                <!-- <strong>What you gain:</strong> Real application of engineering skills that you can add to your resume An
+                    introduction into an interdisciplinary skill for all fields of engineering and product designing The
+                    beginning steps to learning how to 3D print and use on campus equipment<br /> --><br />
+                <a class="w3-button w3-green w3-border w3-round-large"
+                    href="https://events.vtools.ieee.org/m/206682">Register</a><br />
+                &nbsp;</div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="https://images.squarespace-cdn.com/content/v1/556b5950e4b07e55e369809c/1532542265751-RN7XC9ZN0T2OR5W0R6EQ/ke17ZwdGBToddI8pDm48kKym2L8rdN4yTUnxWEdoWqJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0jRb3i7UjwNNySrgFE_nWasa3FE20v3TWSZqikbUXkMsHoBNubDz39FPIez0gW0V5g/best+soldering+iron.jpg?format=1000w" />
+            </strong></div>
+    </div>
+    <strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Solidworks Workshop</strong></h2>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+
+            <h5 class="indent2"><strong>9/18/2019</strong></h5>
+
+            <h5 class="indent2"><strong>11:30am-1:00pm</strong></h5>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+
+            <h5 class="indent2"><strong>SCI 109</strong></h5>
+        </div>
+
+        <div class="col-lg-5 padded"><strong><strong>Bring:</strong> Your enthusiasm and know your school computer
+                id/login. Computers provided, laptop is not necessary!<br />
+                <br />
+                <strong>Event Details: </strong>We have teamed up with the Rapid Prototyping Lab on campus to create a
+                workshop to learn the basics to using SolidWorks.<br />
+                <br />
+                <strong>What you gain:</strong> Real application of engineering skills that you can add to your resume
+                An introduction into an interdisciplinary skill for all fields of engineering and product designing The
+                beginning steps to learning how to 3D print and use on campus equipment<br />
+                <br />
+                <strong>Registration Link: </strong><a href="https://events.vtools.ieee.org/m/204507"
+                    target="_blank">https://events.vtools.ieee.org/m/204507</a><br />
+                <br />
+                &nbsp;</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/468398_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong>
+        <!-- PASTE OLD EVENTS AFTER HERE --> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Getting Hired in Intel Tech</strong></h2>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+
+            <h5 class="indent2"><strong>4/19/2019</strong></h5>
+
+            <h5 class="indent2"><strong>5:30pm-6:30pm</strong></h5>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+
+            <h5 class="indent2"><strong>SCI 215</strong></h5>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>We are collaborating with Intel to bring you information about the best
+                ways to get hired in tech!<br />
+                <br />
+                Learn about best techniques for resume writing, strategies for career fairs, phone and face to face
+                interviews with Tech Companies to land your dream job.<br />
+                <br />
+                And because we are grateful to all of you attending, <b>free pizza</b> and <b>refreshments</b> will be
+                provided!<br />
+                &nbsp;</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/466547_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Resume Workshop</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>4/3/2019</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>12:00pm-2:00pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong><i>This event is brought to you with the support of the Society of Hispanic
+                    Engineers (SHPE) </i><br />
+                <br />
+                Hope everyone is refreshed from Spring Break, and ready to get back into the engineering mindset!<br />
+                <br />
+                We will be hosting a resume workshop in preperation of the engineering career fair coming this May! The
+                workshop will include building a resume, researching the job, networking, online builder, tips, results,
+                industry words, and cover letter.<br />
+                <br />
+                Please be ready with the following: </strong>
+
+            <ul>
+                <li><strong>Upload a copy of your resume <a
+                            href="https://drive.google.com/drive/u/0/folders/1V92tivSDVbw9v67QtuxdPYFKa27oCyfK">here</a>
+                    </strong></li>
+                <li><strong>Bring a list of jobs if you have applied to (if any)</strong></li>
+                <li><strong>Create a LinkedIn (if not already done)</strong></li>
+                <li><strong>Bring pen and paper</strong></li>
+            </ul>
+            <strong> See you all this Wednesday!</strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/466089_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>March General Meeting</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>3/7/2019</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>4:00pm-5:00pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>We are hosting our <b>2nd general meeting</b> as well as <b>officer
+                    elections</b> for the upcoming academic year! We will have pizza and refreshments as always.<br />
+                <br />
+                Interested in running for a position?<br />
+                &nbsp; </strong>
+
+            <ul>
+                <li><strong>You MUST be able to serve for at least the entire academic year (Fall 2019 - Spring
+                        2020).</strong></li>
+                <li><strong>Must be or become an IEEE official member.</strong></li>
+                <li><strong>Be prepared to have a 1-2 minute speech.</strong></li>
+                <li><strong>Fill out this form: <a
+                            href="https://goo.gl/forms/9Voh1uVynmqcjiUk2">https://goo.gl/forms/9Voh1uVynmqcjiUk2</a>
+                    </strong></li>
+            </ul>
+            <strong> There will be an in-person vote on the day of the election.<br />
+                <br />
+                We will be announcing our upcoming events/dates for the events, such as, our soldering workshop and
+                resume workshop.<br />
+                <br />
+                Hope to see you there!</strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/465297_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Soldering Workshop</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>3/5/2019</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1:00pm-3:00pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 111</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>IEEE @ SFSU is hosting its first soldering workshop of 2019!<br />
+                &nbsp; </strong>
+
+            <ul>
+                <li><strong>You will be soldering a traffic light PCB.</strong></li>
+                <li><strong>This is a great introduction to soldering, especially for the final project in ENGR
+                        301.</strong></li>
+                <li><strong>The tools and kit will be provided to you.</strong></li>
+                <li><strong>This is a really fun, hands-on workshop we host every semester!</strong></li>
+            </ul>
+            <strong> Price: </strong>
+
+            <ul>
+                <li><strong>$15 IEEE Members</strong></li>
+                <li><strong>$20 Non Members</strong></li>
+            </ul>
+            <strong> There are only 15 spots available, so sign up early!<br />
+                <br />
+                Register at <a href="http://solder.ieeesfsu.com">solder.ieeesfsu.com</a>!</strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/465321_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>First General Meeting</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>2/13/2019</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1:30pm-3:00pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>IEEE will be hosting our first general meeting and social of the semester.
+                Due to some booking issues, we have pushed the time up, but the location will remain the same!<br />
+                <br />
+                We will be announcing our plans for this semester and general info about IEEE for new members! After the
+                presentation, we will be having a social so everyone can mingle and meet other electrical/computer
+                engineers! There will be FREE PIZZA &amp; refreshments!<br />
+                <br />
+                Hope to see you there!</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/464921_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Cable Termination Technology</strong></h2>
+
+            <h5><strong>Roland Engle</strong></h5>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>10/22/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-3pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Price:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>Members: $5</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>General: $10</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>IEEE@SFSU is hosting another workshop! This time you get the opportunity to
+                learn how cables are terminated without using solder.<br />
+                <br />
+                Roland Engle, chair of the San Francisco IEEE section and Product Acpplication Specialist for ABB
+                (formerly Thomas and Betts), has agreed to come to our campus and show us what he knows from his 37
+                years of expertise in the industry.<br />
+                <br />
+                The company he works for, ABB, pioneered this technology, so you will be sure to get the best training
+                possible!<br />
+                <br />
+                Registration ends Thursday at 8pm, so sign up fast at the link below:<br />
+                <a href="https://events.vtools.ieee.org/m/179206">https://events.vtools.ieee.org/m/179206</a></strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/462041_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>2nd General Meeting</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>10/15/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>We are hosting our second general meeting for the Fall &#39;18 semester! We
+                will be covering topics such as: </strong>
+
+            <ul>
+                <li><strong>Upcoming IEEE seminars</strong></li>
+                <li><strong>Cable Termination Technology Workshop</strong></li>
+                <li><strong>Game Night! Social</strong></li>
+                <li><strong>T-shirts</strong></li>
+                <li><strong>Membership</strong></li>
+                <li><strong>Officer Shadowing Opportunities</strong></li>
+                <li><strong>And much more!</strong></li>
+            </ul>
+            <strong> And of course free pizza will be available as our thank you to everyone coming out to support the
+                San Francisco State University IEEE chapter.<br />
+                <br />
+                We hope to see everyone on Monday!</strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="https://s3.amazonaws.com/os_extranet_files_test/1166_100686_second_general_fall18.png" /></strong>
+        </div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Soldering Workshop</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>10/01/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-3pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Price:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>$15</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Spots:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>15</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong><b><i>Due to high demand, we&#39;re hosting a second
+                        workshop!</i></b><br />
+                <br />
+                IEEE@SFSU is hosting our Soldering Workshop! We will provide all the equipment and materials that are
+                needed to try your hand at soldering! You will learn how to properly solder and what to look for in a
+                good soldered joint. The best part: you get to <b>take home</b> a traffic light circuit board kit so you
+                can impress your friends and family with your soldered masterpiece!<br />
+                <br />
+                Register online at:<br />
+                <a href="https://events.vtools.ieee.org/m/178024">https://events.vtools.ieee.org/m/178024</a><br />
+                <br />
+                Registration closes on Sunday Sept 30 at 7pm, so make your registration soon!</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/461064_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Soldering Workshop</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>9/24/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Price:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>$15</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Spots:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>15</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>IEEE@SFSU is hosting our Soldering Workshop! We will provide all the
+                equipment and materials that are needed to try your hand at soldering! You will learn how to properly
+                solder and what to look for in a good soldered joint. The best part: you get to <b>take home</b> a
+                traffic light circuit board kit so you can impress your friends and family with your soldered
+                masterpiece!<br />
+                <br />
+                Register online at:<br />
+                <a href="https://events.vtools.ieee.org/m/177512">https://events.vtools.ieee.org/m/177512</a><br />
+                <br />
+                Registration closes on Friday Sept 21 at 1pm, so make your registration soon!</strong></div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/460588_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>First General Meeting</strong></h2>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>9/17/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded"><strong>Come join us for our first general metting of the Fall &#39;18 semester!
+                Help us kick off the new school year with information about topics such as: </strong>
+
+            <ul>
+                <li><strong>Upcoming IEEE seminars</strong></li>
+                <li><strong>Discounted t-shirt sales</strong></li>
+                <li><strong>Micromouse</strong></li>
+                <li><strong>IEEExtreme 24 hour coding challenge</strong></li>
+                <li><strong>Membership</strong></li>
+                <li><strong>Ways you can contribute</strong></li>
+                <li><strong>And much more!</strong></li>
+            </ul>
+            <strong> And of course free pizza will be available as our thank you to everyone coming out to support the
+                San Francisco State University IEEE chapter.<br />
+                <br />
+                We hope to see both new and old members as we welcome in the new semester!</strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/460066_original.png" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Professor Seminars:</strong></h2>
+
+            <h5><strong>Dr. Fatemeh Tehranipoor</strong></h5>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>4/23/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded">
+            <h4 class="centered"><strong>Internet of Things</strong></h4>
+
+            <h5 class="centered"><strong>Security and Privacy Challenges</strong></h5>
+            <br />
+            <strong>Come listen to our very own Professor Tehranipoor explain her research into hardware security.<br />
+                <br />
+                Refreshments and donuts will be provided, so feel free to come by and learn about what your professors
+                work on outside of the classroom! </strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/468801_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Professor Seminars:</strong></h2>
+
+            <h5><strong>Dr. Xiaorong Zhang</strong></h5>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>4/16/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded">
+            <h4 class="centered"><strong>Electromyography-Based Neural Machine Interface</strong></h4>
+            <br />
+            <strong>Come listen to our very own Professor Zhang explain her research into neural machine
+                interfacing.<br />
+                <br />
+                Refreshments and donuts will be provided, so feel free to come by and learn about what your professors
+                work on outside of the classroom! </strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/460272_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+
+    <hr class="divider" /><strong> </strong>
+
+    <div class="row">
+        <div class="col-lg-3 padded">
+            <h2><strong>Professor Seminars:</strong></h2>
+
+            <h5><strong>Dr. Mohammad Haji Aboli</strong></h5>
+            <strong>&nbsp; </strong>
+
+            <h5 class="indent1"><strong>When:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>4/9/2018</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>1pm-2pm</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent1"><strong>Where:</strong></h5>
+            <strong> </strong>
+
+            <h5 class="indent2"><strong>SCI 164</strong></h5>
+            <strong> </strong>
+        </div>
+
+        <div class="col-lg-5 padded">
+            <h4 class="centered"><strong>Scale Space Models in Signal and Image Processing</strong></h4>
+
+            <h5 class="centered"><strong>Theory and Implementation</strong></h5>
+            <br />
+            <strong>Come listen to our very own Professor Haji Aboli explain his research into signal and image
+                processing.<br />
+                <br />
+                Refreshments and donuts will be provided, so feel free to come by and learn about what your professors
+                work on outside of the classroom! </strong>
+        </div>
+
+        <div class="col-lg-4 padded"><strong><img class="sidepic"
+                    src="http://os_extranet_images.s3.amazonaws.com/460267_original.jpg" /></strong></div>
+    </div>
+    <strong> </strong>
+</div>
+
+<hr class="divider" />
+<p><strong>&nbsp;</strong></p>
+
+<p><br />
+    <strong>
+        <!-- Officers --> </strong></p>
+
+<p><strong>&nbsp;</strong></p>
+
+<h1 class="centered" id="officers"><strong>Officers</strong></h1>
+
+<div class="container" style="margin-bottom: 2em; margin-top:2em;">
+    <div class="row">
+        <div class="col-md"><strong>
+                <!-- Empty --> </strong></div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href=""><img class="rounded-circle officers" src="[[image:drzhang2]]" /></a>
+                </strong>
+
+                <div class="name centered"><strong>Dr. Xiaorong Zhang</strong></div>
+                <strong> </strong>
+
+                <div class="position centered" style="font-size: 75%;"><strong>Assistant Professor of Computer
+                        Engineering </strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Advisor</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md"><strong>
+                <!-- Empty --> </strong></div>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 2em; margin-top: 2em;">
+    <div class="row">
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/nguyennpaulina/"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468332_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Paulina Nguyen</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Chair</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/timothy-nguyen-409b14191/"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468399_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Tim Nguyen</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Vice Chair</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="http://linkedin.com/in/michael-akay-7a8318104"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468331_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Michael Akay</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Treasurer</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/procolin"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468326_original.png" /></a> </strong>
+
+                <div class="name centered"><strong>Ricardo Colin</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>External Director</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/jonathan-jules-delfin"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468329_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Jonathan Jules Delfin</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Internal Director</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="http://linkedin.com/in/kenny-ngo-34146a133"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468328_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Kenny Ngo</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Designer</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/danielaamartinez/"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468330_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Daniela Martinez</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Secretary</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/danny-ceron-1a3553103/"><img
+                            class="rounded-circle officers"
+                            src="http://os_extranet_images.s3.amazonaws.com/468800_original.jpg" /></a> </strong>
+
+                <div class="name centered"><strong>Danny Ceron Garcia</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Web Developer</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+        </div>
+
+        <div class="col-md">
+        </div>
+
+        <div class="col-md">
+            <div class="square"><strong><a href="https://www.linkedin.com/in/darren-newell-629609173/"><img
+                            class="rounded-circle officers"
+                            src="https://media.licdn.com/dms/image/C5603AQGaiwT3opM43Q/profile-displayphoto-shrink_800_800/0?e=1579132800&v=beta&t=2TpVgzTXkBQz_HeHlVUOPUn1qrBSb27u4D3lJndjjpk" /></a> </strong>
+
+                <div class="name centered"><strong>Darren Newell</strong></div>
+                <strong> </strong>
+
+                <div class="position centered"><strong>Outreach Chair</strong></div>
+                <strong> </strong>
+
+                <div class="contacts centered"><strong>&nbsp;</strong></div>
+                <strong> </strong>
+            </div>
+        </div>
+
+        <div class="col-md">
+        </div>
+        <div class="col-md">
+        </div>
+    </div>
+</div>
+
+<hr class="divider" />
+<p><strong>&nbsp;</strong></p>
+
+<p><br />
+    <strong>
+        <!-- Contact --> </strong></p>
+
+<p><strong>&nbsp;</strong></p>
+
+<div class="centered" id="contact">
+    <a href="https://ieeesfsu.slack.com">
+        <img alt="HTML tutorial" src="[[image:slack]]" style="width:42px;height:42px;border:0" />
+    </a>
+
+    <a href="https://www.instagram.com/ieeesfsu/">
+        <img alt="HTML tutorial" src="[[image:ig]]" style="width:42px;height:42px;border:0" />
+    </a>
+    <div style="font-size: 25%"><strong>Contact Us</strong></div>
+</div>
+
+<p><strong>
+        <!-- Used for Bootstrap -->
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script> </strong></p>
+
+<div id="event_popup_box_wrapper" style="display:none;">
+    <div class="profile_box" id="event_popup_box"><strong>&nbsp;</strong></div>
+</div>
+
+<div id="day_popup_box_wrapper" style="display:none;">
+    <div class="profile_box" id="day_popup_box"><strong>&nbsp;</strong></div>
+</div>
+
+<p><strong>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-1975314-11");
+                pageTracker._setDomainName(".orgsync.com");
+                pageTracker._trackPageview();
+            } catch (err) { }</script></strong></p>
